@@ -10,3 +10,8 @@ tmp/
 /.buildpath
 /.project
 /.settings/
+#
+# For using vi on the edison
+#
+.*.un~
+*~
