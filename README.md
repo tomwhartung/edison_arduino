@@ -18,6 +18,11 @@ downloads/iot-devkit-prof-dev-image-edison-20160315.zip
 	Unpacked into iot-devkit-prof-dev-image-edison-20160315
 	Used to flash the edison (install OS)
 
+downloads/edison-sdk-linux64-ww25.5-15.zip
+	Contains:
+		poky-edison-glibc-x86_64-edison-image-core2-32-toolchain-1.7.2.manifest
+		poky-edison-glibc-x86_64-edison-image-core2-32-toolchain-1.7.2.sh
+
 downloads/iot_web_linux64_master_3022.tgz
 	Unpacked into iot_web_linux64
 	Contains version 1.6.5 of the arduino sdk
@@ -35,6 +40,11 @@ downloads/xdk_web_linux64_master_3240.tgz
 ### Unpacking and Installing Downloaded Files
 
 More details about downloaded, unpacked, and possibly installed files.
+
+edison-sdk-linux64-ww25.5-15: unzipped edison-sdk-linux64-ww25.5-15.zip
+	Contains:
+		poky-edison-glibc-x86_64-edison-image-core2-32-toolchain-1.7.2.manifest
+		poky-edison-glibc-x86_64-edison-image-core2-32-toolchain-1.7.2.sh
 
 iot-devkit-prof-dev-image-edison-20160315
 	Contains image flashed to the edison by phoneflashtoollite
