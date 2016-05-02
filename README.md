@@ -32,6 +32,10 @@ downloads/l_iot_dev_kit_2016.1.027.tar.gz
 	Downloaded from https://software.intel.com/iot/hardware/edison/downloads - "Linux Installer"
 	Unpacked into l_iot_dev_kit_2016.1.027
 
+downloads/iss-iot-linux_03-14-16.tar.bz2
+	Downloaded from https://software.intel.com/en-us/iot/library/edison-getting-started - "Linux 64-bit"
+**	This might actually contain the XDK IoT Edition?!?  Their links seem to be a bit messed up....
+
 downloads/phoneflashtoollite_5.3.2.0_linux_x86_64.deb
 	Used to install phoneflashtoollite, which I used to flash the edison
 
