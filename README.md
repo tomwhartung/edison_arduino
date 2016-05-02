@@ -24,10 +24,12 @@ downloads/edison-sdk-linux64-ww25.5-15.zip
 		poky-edison-glibc-x86_64-edison-image-core2-32-toolchain-1.7.2.sh
 
 downloads/iot_web_linux64_master_3022.tgz
+	Downloaded from https://software.intel.com/en-us/iot/software/ide/intel-xdk-iot-edition
 	Unpacked into iot_web_linux64
 	Contains version 1.6.5 of the arduino sdk
 
 downloads/l_iot_dev_kit_2016.1.027.tar.gz
+	Downloaded from https://software.intel.com/iot/hardware/edison/downloads - "Linux Installer"
 	Unpacked into l_iot_dev_kit_2016.1.027
 
 downloads/phoneflashtoollite_5.3.2.0_linux_x86_64.deb
@@ -54,7 +56,8 @@ iot_web_linux64
 	Installed version 1.6.5 of the arduino sdk into /opt/intel/arduino (DO NOT USE)
 
 l_iot_dev_kit_2016.1.027
-	Unsure what this is for.
+	Downloaded from https://software.intel.com/iot/hardware/edison/downloads
+	Running install_GUI.sh or install.sh updates the Edison image and installs the developer IDEs
 
 xdk_web_linux64
 	Installed XDK into /opt/intel/XDK
