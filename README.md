@@ -15,8 +15,13 @@ downloads/arduino-1.6.8-linux64.tar.xz
 	Installed into /opt/arduino
 
 downloads/iot-devkit-prof-dev-image-edison-20160315.zip
+	Downloaded from https://software.intel.com/iot/hardware/edison/downloads (Release 3.0 Yocto complete image)
 	Unpacked into iot-devkit-prof-dev-image-edison-20160315
 	Used to flash the edison (install OS)
+
+downloads/edison-mcusdk-linux64-1.0.10.zip
+	Downloaded from https://software.intel.com/iot/hardware/edison/downloads (Microcontroller (MCU) SDK -> Linux 64-bit)
+**	Unpacked into ...
 
 downloads/edison-sdk-linux64-ww25.5-15.zip
 	Contains:
@@ -35,8 +40,10 @@ downloads/l_iot_dev_kit_2016.1.027.tar.gz
 downloads/iss-iot-linux_03-14-16.tar.bz2
 	Downloaded from https://software.intel.com/en-us/iot/library/edison-getting-started - "Linux 64-bit"
 **	This might actually contain the XDK IoT Edition?!?  Their links seem to be a bit messed up....
+**	Unpacked into ...
 
 downloads/phoneflashtoollite_5.3.2.0_linux_x86_64.deb
+	Downloaded from https://software.intel.com/iot/hardware/edison/downloads (Flash Tool Lite Download - Linux)
 	Used to install phoneflashtoollite, which I used to flash the edison
 
 downloads/xdk_web_linux64_master_3240.tgz
