@@ -14,11 +14,6 @@ whether I want to use them on an on-going basis, etc.
 downloads/arduino-1.6.8-linux64.tar.xz
 	Installed into /opt/arduino
 
-downloads/iot-devkit-prof-dev-image-edison-20160315.zip
-	Downloaded from https://software.intel.com/iot/hardware/edison/downloads (Release 3.0 Yocto complete image)
-	Unpacked into iot-devkit-prof-dev-image-edison-20160315
-	Used to flash the edison (install OS)
-
 downloads/edison-mcusdk-linux64-1.0.10.zip
 	Downloaded from https://software.intel.com/iot/hardware/edison/downloads (Microcontroller (MCU) SDK -> Linux 64-bit)
 **	Unpacked into ...
@@ -27,6 +22,11 @@ downloads/edison-sdk-linux64-ww25.5-15.zip
 	Contains:
 		poky-edison-glibc-x86_64-edison-image-core2-32-toolchain-1.7.2.manifest
 		poky-edison-glibc-x86_64-edison-image-core2-32-toolchain-1.7.2.sh
+
+downloads/iot-devkit-prof-dev-image-edison-20160315.zip
+	Downloaded from https://software.intel.com/iot/hardware/edison/downloads (Release 3.0 Yocto complete image)
+	Unpacked into iot-devkit-prof-dev-image-edison-20160315
+	Used to flash the edison (install OS)
 
 downloads/iot_web_linux64_master_3022.tgz
 	Downloaded from https://software.intel.com/en-us/iot/software/ide/intel-xdk-iot-edition
