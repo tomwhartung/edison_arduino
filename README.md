@@ -3,6 +3,12 @@
 
 Use this repo for work done on the edison (arduino).
 
+## Subdirectories
+
+intel_roadshow - just a bash script that I wrote hoping it would run at startup.
+	This did not work but I want to keep it for future reference anyways.
+
+
 ## Downloads
 
 List of files downloaded for the Intel Edison, with brief
