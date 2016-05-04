@@ -14,7 +14,7 @@
  */
 
 int ledPin = 13;
-int delayMillisecs = 1000;
+int delayMillisecs = 3000;
 
 // the setup function runs once when you press reset or power the board
 void setup() {
@@ -25,7 +25,7 @@ void setup() {
 // the loop function runs over and over again forever
 void loop() {
   digitalWrite(ledPin, HIGH);   // turn the LED on (HIGH is the voltage level)
-  delay(1000);                  // wait for a second
+  delay(delayMillisecs);        // wait for the specified number of milliseconds
   digitalWrite(ledPin, LOW);    // turn the LED off by making the voltage LOW
-  delay(1000);                  // wait for a second
+  delay(delayMillisecs);        // wait for the specified number of milliseconds
 }
