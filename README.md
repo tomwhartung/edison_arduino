@@ -5,9 +5,11 @@ Use this repo for work done on the edison (arduino).
 
 ## Subdirectories
 
-intel_roadshow - just a bash script that I wrote hoping it would run at startup.
+intel_roadshow - what got me started on all this
+	Contains a bash script that I wrote hoping it would run at startup.
 	This did not work but I want to keep it for future reference anyways.
 
+my_examples - modifications to the supplied examples
 
 ## Downloads
 
