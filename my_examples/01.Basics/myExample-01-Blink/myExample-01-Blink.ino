@@ -14,18 +14,21 @@
  */
 
 int ledPin = 13;
-int delayMillisecs = 3000;
+int onMilliseconds = 200;
+int offMilliseconds = 800;
 
 // the setup function runs once when you press reset or power the board
 void setup() {
   // initialize digital pin 13 as an output.
   pinMode(ledPin, OUTPUT);
+  Serial.begin( 9600 );
 }
 
 // the loop function runs over and over again forever
 void loop() {
   digitalWrite(ledPin, HIGH);   // turn the LED on (HIGH is the voltage level)
-  delay(delayMillisecs);        // wait for the specified number of milliseconds
+  delay(onMilliseconds);        // wait for the specified number of milliseconds
   digitalWrite(ledPin, LOW);    // turn the LED off by making the voltage LOW
-  delay(delayMillisecs);        // wait for the specified number of milliseconds
+  delay(offMilliseconds);       // wait for the specified number of milliseconds
+  Serial.println( "in loop fcn ledPin = " + ledPin );
 }
