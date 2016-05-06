@@ -57,8 +57,11 @@ downloads/phoneflashtoollite_5.3.2.0_linux_x86_64.deb
 	Used to install phoneflashtoollite, which I used to flash the edison
 
 downloads/xdk_web_linux64_master_3240.tgz
+	Readme for the node version of blink demo code github: https://github.com/gomobile/iotapp-template-onboard-led-blink
+	  refers to https://software.intel.com/en-us/html5 - clicking on XDK takes me to
+	  where this download is available, at: https://software.intel.com/en-us/intel-xdk - Download for Linux (64-bit)
 	Unpacked into xdk_web_linux64 (see below)
-	XDK: phone apps?
+	XDK: phone apps? WTF?!?  (Even if this is the "correct" one, I would rather not use it.)
 
 ### Unpacking and Installing Downloaded Files
 
@@ -89,4 +92,5 @@ l_iot_dev_kit_2016.1.027
 xdk_web_linux64
 	Installed XDK into /opt/intel/XDK
 	This looks like it should be used to create phone apps
+	Even if this is the "correct" one, I would rather not use it.
 
