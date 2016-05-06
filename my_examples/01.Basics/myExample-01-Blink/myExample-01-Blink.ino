@@ -22,12 +22,13 @@ int dotMs = 200;
 int dashMs = 3 * dotMs;
 int elementGapMs = dotMs;
 int letterGapMs  = dashMs;
-
+//
 // the setup function runs once when you press reset or power the board
+//
 void setup() {
   // initialize digital pin 13 as an output.
   pinMode(ledPin, OUTPUT);
-  Serial.begin( 9600 );
+  // Serial.begin( 9600 );
 }
 //
 // the loop function runs over and over again forever
@@ -38,7 +39,7 @@ void loop() {
   delay(elementGapMs);   // leave it off for the desired gap between dashes and dots in a letter
   dash();
   delay(letterGapMs);    // leave it off for the desired gap between letters
-  Serial.println( "in loop fcn ledPin = " + ledPin );
+  // Serial.println( "in loop fcn ledPin = " + ledPin );
 }
 
 //
