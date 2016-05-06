@@ -24,7 +24,7 @@ downloads/arduino-1.6.8-linux64.tar.xz
 
 downloads/edison-mcusdk-linux64-1.0.10.zip
 	Downloaded from https://software.intel.com/iot/hardware/edison/downloads (Microcontroller (MCU) SDK -> Linux 64-bit)
-**	Unpacked into ...
+	Unpacked into edison-mcusdk-linux64-1.0.10/
 
 downloads/edison-sdk-linux64-ww25.5-15.zip
 	Contains:
@@ -38,17 +38,19 @@ downloads/iot-devkit-prof-dev-image-edison-20160315.zip
 
 downloads/iot_web_linux64_master_3022.tgz
 	Downloaded from https://software.intel.com/en-us/iot/software/ide/intel-xdk-iot-edition
+	Also available at https://software.intel.com/en-us/iot/software/ide - Intel XDK IoT Edition - Download for Linux (64-bit)
 	Unpacked into iot_web_linux64
 	Contains version 1.6.5 of the arduino sdk
 
 downloads/l_iot_dev_kit_2016.1.027.tar.gz
 	Downloaded from https://software.intel.com/iot/hardware/edison/downloads - "Linux Installer"
+	Also available at https://software.intel.com/en-us/iot/software/installers - Intel Edison Board Setup Tools and Installers - Linux
 	Unpacked into l_iot_dev_kit_2016.1.027
 
 downloads/iss-iot-linux_03-14-16.tar.bz2
 	Downloaded from https://software.intel.com/en-us/iot/library/edison-getting-started - "Linux 64-bit"
 **	This might actually contain the XDK IoT Edition?!?  Their links seem to be a bit messed up....
-**	Unpacked into ...
+	Unpacked into iss-iot-linux
 
 downloads/phoneflashtoollite_5.3.2.0_linux_x86_64.deb
 	Downloaded from https://software.intel.com/iot/hardware/edison/downloads (Flash Tool Lite Download - Linux)
@@ -67,12 +69,18 @@ edison-sdk-linux64-ww25.5-15: unzipped edison-sdk-linux64-ww25.5-15.zip
 		poky-edison-glibc-x86_64-edison-image-core2-32-toolchain-1.7.2.manifest
 		poky-edison-glibc-x86_64-edison-image-core2-32-toolchain-1.7.2.sh
 
+edison-mcusdk-linux64-1.0.10: unzipped edison-mcusdk-linux64-1.0.10.zip
+**	Contains ...
+
 iot-devkit-prof-dev-image-edison-20160315
 	Contains image flashed to the edison by phoneflashtoollite
 
 iot_web_linux64
 	Contains version 1.6.5 of the arduino sdk (USE 1.6.8 INSTEAD)
 	Installed version 1.6.5 of the arduino sdk into /opt/intel/arduino (DO NOT USE)
+
+iss-iot-linux: unpacked iss-iot-linux_03-14-16.tar.bz2
+**	This might actually contain the XDK IoT Edition?!?  Their links seem to be a bit messed up....
 
 l_iot_dev_kit_2016.1.027
 	Downloaded from https://software.intel.com/iot/hardware/edison/downloads
