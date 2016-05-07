@@ -65,31 +65,31 @@ downloads/xdk_web_linux64_master_3240.tgz
 
 ### Unpacking and Installing Downloaded Files
 
-More details about downloaded, unpacked, and possibly installed files.
+Where the downloaded are unpacked, if applicable, and more details about them such as whether they are installed, as appropriate.
 
-edison-sdk-linux64-ww25.5-15: unzipped edison-sdk-linux64-ww25.5-15.zip
+unpacked/edison-sdk-linux64-ww25.5-15: unzipped edison-sdk-linux64-ww25.5-15.zip
 	Contains:
 		poky-edison-glibc-x86_64-edison-image-core2-32-toolchain-1.7.2.manifest
 		poky-edison-glibc-x86_64-edison-image-core2-32-toolchain-1.7.2.sh
 
-edison-mcusdk-linux64-1.0.10: unzipped edison-mcusdk-linux64-1.0.10.zip
+unpacked/edison-mcusdk-linux64-1.0.10: unzipped edison-mcusdk-linux64-1.0.10.zip
 **	Contains ...
 
-iot-devkit-prof-dev-image-edison-20160315
+unpacked/iot-devkit-prof-dev-image-edison-20160315
 	Contains image flashed to the edison by phoneflashtoollite
 
-iot_web_linux64
+unpacked/iot_web_linux64
 	Contains version 1.6.5 of the arduino sdk (USE 1.6.8 INSTEAD)
 	Installed version 1.6.5 of the arduino sdk into /opt/intel/arduino (DO NOT USE)
 
-iss-iot-linux: unpacked iss-iot-linux_03-14-16.tar.bz2
+unpacked/iss-iot-linux: unpacked iss-iot-linux_03-14-16.tar.bz2
 **	This might actually contain the XDK IoT Edition?!?  Their links seem to be a bit messed up....
 
-l_iot_dev_kit_2016.1.027
+unpacked/l_iot_dev_kit_2016.1.027
 	Downloaded from https://software.intel.com/iot/hardware/edison/downloads
 	Running install_GUI.sh or install.sh updates the Edison image and installs the developer IDEs
 
-xdk_web_linux64
+unpacked/xdk_web_linux64
 	Installed XDK into /opt/intel/XDK
 	This looks like it should be used to create phone apps
 	Even if this is the "correct" one, I would rather not use it.
