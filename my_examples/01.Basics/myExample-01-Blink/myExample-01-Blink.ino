@@ -22,6 +22,7 @@ int dotMs = 200;
 int dashMs = 3 * dotMs;
 int elementGapMs = dotMs;
 int letterGapMs  = dashMs;
+int wordGapMs = 7 * dotMs;
 //
 // General Functions
 // -----------------
@@ -120,6 +121,7 @@ void loop() {
   blinkLetterI();
   blinkLetterN();
   blinkLetterO();
+  delay(wordGapMs);    // leave it off for the desired gap between words
   // Serial.println( "in loop fcn ledPin = " + ledPin );
 }
 
