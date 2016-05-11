@@ -32,9 +32,9 @@ const int ledPin4   = 4;     // the number of the LED pin
 // Variables will change:
 //
 int currentButtonReading = LOW;  // most recent reading of the pushbutton value
-int currentButtonState = LOW;    // the current pushbutton status
-int lastButtonState = LOW;       // the previous reading from the input pin
-int ledPin4State = LOW;          // variable for saving the led status
+int lastButtonReading = LOW;       // the previous reading from the input pin
+int savedButtonState = LOW;    // the current pushbutton status
+int ledPin4State = HIGH;         // variable for saving the led status
 //
 // These variables are longs because the time, measured in miliseconds,
 // quickly becomes a bigger number than can be stored in an int.
@@ -48,8 +48,6 @@ void setup() {
   pinMode(buttonPin, INPUT);            // initialize the pushbutton pin as an input
   pinMode(ledPin4, OUTPUT);             // initialize the LED pin as an output
   digitalWrite(ledPin4, ledPin4State);  // set initial LED state
-  currentButtonState = !currentButtonReading;
-  lastButtonState = !currentButtonReading;
 }
 /**
  * Loop forever, with added debounce logic
@@ -59,24 +57,24 @@ void loop() {
   //
   // if the button state has changed. reset the debounce time
   //
-  if ( currentButtonReading != lastButtonState ) {
+  if ( currentButtonReading != lastButtonReading ) {
     lastDebounceTime = millis();   // reset the debouncing timer
   }
   if ( (millis() - lastDebounceTime) > debounceDelay ) {
-    if ( currentButtonReading != currentButtonState ) {
-      currentButtonState = currentButtonReading;
-      lastButtonState = currentButtonReading;  // save the reading.  Next time through the loop,it'll be the lastButtonState:
+    if ( currentButtonReading != savedButtonState ) {
+      savedButtonState = currentButtonReading;
       //
-      // toggle only if the pushbutton is pressed (currentButtonState is HIGH)
+      // toggle only if the pushbutton is pressed (savedButtonState is HIGH)
       //
-      if ( currentButtonState == HIGH ) {
+      if ( savedButtonState == HIGH ) {
         if ( ledPin4State == LOW ) {
           ledPin4State = HIGH;          // turn LED on
         } else {
           ledPin4State = LOW;           // turn LED off
         }
-        digitalWrite( ledPin4, ledPin4State );    // set LED to desired state
       }
     }
   }
+  digitalWrite( ledPin4, ledPin4State );    // set LED to desired state
+  lastButtonReading = currentButtonReading;  // save the reading.  Next time through the loop,it'll be the lastButtonReading:
 }
