@@ -1,4 +1,4 @@
-/* 
+/**
  * Random RGB - set random intervals (cycles) for the three leds
  *
  * Turns on and off a light emitting diode (LED) connected to a digital
@@ -50,6 +50,17 @@ unsigned long getRandomCycleMillis() {
   return randomCycleMillis;
 }
 /**
+ *  toggle the LED: return the state that is the opposite of the one passed in
+ *  I am not a fan of mixing booleans and ints, as in statements like "state = !state;"
+ */
+int toggleState( int currentState ) {
+  if ( currentState == LOW) {
+    return HIGH;
+  } else {
+    return LOW;
+  }
+}
+/**
  * Setup the pins and output
  */
 void setup() {
@@ -73,16 +84,9 @@ void loop() {
   // Serial.println( currentMillis );
 
   if( currentMillis - led2LastMillis >= led2CycleMillis ) {
-    led2LastMillis = currentMillis;       // save the last time you blinked the LED
-    //
-    // toggle the LED
-    //
-    if (ledPin3State == LOW) {
-      ledPin2State = HIGH;
-    } else {
-      ledPin2State = LOW;
-    }
-    digitalWrite(ledPin2, ledPin2State);    // set the LED with the ledState of the variable:
+    led2LastMillis = currentMillis;               // remember last time the LED was blinked
+    ledPin2State = toggleState( ledPin2State );   // toggle the state of the LED
+    digitalWrite(ledPin2, ledPin2State);          // update the LED with the new state
   }
   if( currentMillis - led3LastMillis >= led3CycleMillis ) {
     led3LastMillis = currentMillis;       // save the last time you blinked the LED
