@@ -91,11 +91,10 @@ void loop() {
   unsigned long currentMillis = millis();
   Serial.println( currentMillis );
   //
-  // (1) Unsure why this function doesn't work, not worried about it now though
+  // TODO: break this code into functions
+  //   An attempt was to do this with this function, but it doesn't work, and I am unsure why
   //     checkLedPin4( currentMillis );
-  //     TODO: break this code into functions
-  // (2) Right now only have two working LEDs
-  //     TODO: get a third LED for pin 2 and play with three at once
+  //   Not worrying about this now though
   //
   if( currentMillis - previousMillis2 >= interval2 ) {
     previousMillis2 = currentMillis;       // save the last time you blinked the LED
