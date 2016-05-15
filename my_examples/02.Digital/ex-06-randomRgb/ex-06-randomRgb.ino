@@ -84,33 +84,19 @@ void loop() {
   // Serial.println( currentMillis );
 
   if( currentMillis - led2LastMillis >= led2CycleMillis ) {
-    led2LastMillis = currentMillis;               // remember last time the LED was blinked
-    ledPin2State = toggleState( ledPin2State );   // toggle the state of the LED
-    digitalWrite(ledPin2, ledPin2State);          // update the LED with the new state
+    led2LastMillis = currentMillis;              // remember last time LED 2 was blinked
+    ledPin2State = toggleState( ledPin2State );  // toggle the state of the LED
+    digitalWrite(ledPin2, ledPin2State);         // update the LED with the new state
   }
   if( currentMillis - led3LastMillis >= led3CycleMillis ) {
-    led3LastMillis = currentMillis;       // save the last time you blinked the LED
-    //
-    // toggle the LED
-    //
-    if (ledPin3State == LOW) {
-      ledPin3State = HIGH;
-    } else {
-      ledPin3State = LOW;
-    }
-    digitalWrite(ledPin3, ledPin3State);    // set the LED with the ledState of the variable:
+    led3LastMillis = currentMillis;              // remember last time LED 3 was blinked
+    ledPin3State = toggleState( ledPin3State );  // toggle the state of the LED
+    digitalWrite(ledPin3, ledPin3State);         // set the LED with the ledState of the variable:
   }
   if( currentMillis - led4LastMillis >= led4CycleMillis ) {
-    led4LastMillis = currentMillis;       // save the last time you blinked the LED
-    //
-    // toggle the LED
-    //
-    if (ledPin4State == LOW) {
-      ledPin4State = HIGH;
-    } else {
-      ledPin4State = LOW;
-    }
-    digitalWrite(ledPin4, ledPin4State);    // set the LED with the ledState of the variable:
+    led4LastMillis = currentMillis;              // remember last time LED 4 was blinked
+    ledPin4State = toggleState( ledPin4State );  // toggle the state of the LED
+    digitalWrite(ledPin4, ledPin4State);         // set the LED with the ledState of the variable:
   }
 }
 
