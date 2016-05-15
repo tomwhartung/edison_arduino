@@ -36,11 +36,13 @@ void setup() {
   // declare the ledPin as an OUTPUT:
   pinMode(ledPin3, OUTPUT);
   pinMode(ledPin4, OUTPUT);
+  Serial.begin( 9600 );
 }
 
 void loop() {
   // read the value from the sensor:
   sensorValue = analogRead(sensorPin);
+  Serial.println( sensorValue );
   // turn the ledPin on
   digitalWrite(ledPin3, HIGH);
   digitalWrite(ledPin4, LOW);
