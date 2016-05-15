@@ -1,25 +1,20 @@
-/* Blink without Delay
-
- Turns on and off a light emitting diode (LED) connected to a digital
- pin, without using the delay() function.  This means that other code
- can run at the same time without being interrupted by the LED code.
-
- The circuit:
- * LED attached from pin 13 to ground.
- * Note: on most Arduinos, there is already an LED on the board
- that's attached to pin 13, so no hardware is needed for this example.
- 
- created 2005
- by David A. Mellis
- modified 8 Feb 2010
- by Paul Stoffregen
- modified 11 Nov 2013
- by Scott Fitzgerald
- 
- 
- This example code is in the public domain.
- 
- http://www.arduino.cc/en/Tutorial/BlinkWithoutDelay
+/* 
+ * Random RGB - set random intervals (cycles) for the three leds
+ *
+ * Turns on and off a light emitting diode (LED) connected to a digital
+ * pin, without using the delay() function.  This means that other code
+ * can run at the same time without being interrupted by the LED code.
+ *
+ * The circuit:
+ * - 3 LEDs attached to pins 2, 3, and 4
+ *
+ * created 2005 - by David A. Mellis
+ * modified 8 Feb 2010 - by Paul Stoffregen
+ * modified 11 Nov 2013 - by Scott Fitzgerald
+ * modified 15 May 2016 - by Tom Hartung
+ *
+ * This example code is in the public domain.
+ * http://www.arduino.cc/en/Tutorial/BlinkWithoutDelay
  */
 //
 // constants won't change. Used here to set the pin numbers:
@@ -47,6 +42,7 @@ unsigned long led2CycleMillis = 1000;           // interval at which to blink le
 unsigned long led3CycleMillis = 1000;           // interval at which to blink led 3 (milliseconds)
 unsigned long led4CycleMillis = 1000;           // interval at which to blink led 4 (milliseconds)
 /**
+ * return a random number of milliseconds for cycling an led
  */
 unsigned long getRandomCycleMillis() {
   unsigned long maxCycleMillis = 1000 + maxCycleSecs;
