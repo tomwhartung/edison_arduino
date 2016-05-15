@@ -82,28 +82,14 @@ void loop() {
     digitalWrite(ledPin2, ledPin2State);         // set the LED with the ledState of the variable:
   }
   if( currentMillis - previousMillis3 >= interval3 ) {
-    previousMillis3 = currentMillis;       // save the last time you blinked the LED
-    //
-    // toggle the LED
-    //
-    if (ledPin3State == LOW) {
-      ledPin3State = HIGH;
-    } else {
-      ledPin3State = LOW;
-    }
-    digitalWrite(ledPin3, ledPin3State);    // set the LED with the ledState of the variable:
+    previousMillis3 = currentMillis;             // save the last time you blinked the LED
+    ledPin3State = toggleState( ledPin3State );  // toggle the LED
+    digitalWrite(ledPin3, ledPin3State);         // set the LED with the ledState of the variable:
   }
   if( currentMillis - previousMillis4 >= interval4 ) {
-    previousMillis4 = currentMillis;       // save the last time you blinked the LED
-    //
-    // toggle the LED
-    //
-    if (ledPin4State == LOW) {
-      ledPin4State = HIGH;
-    } else {
-      ledPin4State = LOW;
-    }
-    digitalWrite(ledPin4, ledPin4State);    // set the LED with the ledState of the variable:
+    previousMillis4 = currentMillis;             // save the last time you blinked the LED
+    ledPin4State = toggleState( ledPin4State );  // toggle the LED
+    digitalWrite(ledPin4, ledPin4State);         // set the LED with the ledState of the variable:
   }
 }
 
