@@ -31,7 +31,7 @@ const int ledPin4 = 4;      // LED on pin 4
 // Variables will change:
 //
 int ledPin2State = LOW;             // ledState used to set LED 2
-int ledPin3State = HIGH;            // ledState used to set LED 3
+int ledPin3State = LOW;             // ledState used to set LED 3
 int ledPin4State = LOW;             // ledState used to set LED 4
 //
 // Generally, you should use "unsigned long" for variables that hold time
