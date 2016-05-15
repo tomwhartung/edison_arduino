@@ -46,31 +46,16 @@ unsigned long previousMillis4 = 0;        // will store last time LED 4 was upda
 const long interval2 = 1000;           // interval at which to blink led 2 (milliseconds)
 const long interval3 = 2000;           // interval at which to blink led 3 (milliseconds)
 const long interval4 = 4000;           // interval at which to blink led 4 (milliseconds)
-/**
- * -----------------------------------------------------------------
- * *** CURRENTLY UNUSED *** SAVING FOR POSSIBLE FUTURE REFERENCE ***
- * -----------------------------------------------------------------
- * Check to see if it's time to blink the LED; that is, if the
- * difference between the current time and last time you blinked
- * the LED is bigger than the interval at which you want to
- * blink the LED.
- * -----------------------------------------------------------------
- * *** CURRENTLY UNUSED *** SAVING FOR POSSIBLE FUTURE REFERENCE ***
- * -----------------------------------------------------------------
- */
-void checkLedPin4( long currentMillis ) {
-  if( currentMillis - previousMillis4 >= interval4 ) {
-    previousMillis4 = currentMillis;       // save the last time you blinked the LED
-    //
-    // toggle the LED
-    //
-    if (ledPin4State == LOW) {
-      ledPin4State = HIGH;
-    } else {
-      ledPin4State = LOW;
-    }
 
-    digitalWrite(ledPin4, ledPin4State);    // set the LED with the ledState of the variable:
+/**
+ *  toggle the LED: return the state that is the opposite of the one passed in
+ *  I am not a fan of mixing booleans and ints, as in statements like "state = !state;"
+ */
+int toggleState( int currentState ) {
+  if ( currentState == LOW) {
+    return HIGH;
+  } else {
+    return LOW;
   }
 }
 /**
@@ -90,23 +75,11 @@ void setup() {
 void loop() {
   unsigned long currentMillis = millis();
   Serial.println( currentMillis );
-  //
-  // TODO: break this code into functions
-  //   An attempt was to do this with this function, but it doesn't work, and I am unsure why
-  //     checkLedPin4( currentMillis );
-  //   Not worrying about this now though
-  //
+
   if( currentMillis - previousMillis2 >= interval2 ) {
-    previousMillis2 = currentMillis;       // save the last time you blinked the LED
-    //
-    // toggle the LED
-    //
-    if (ledPin2State == LOW) {
-      ledPin2State = HIGH;
-    } else {
-      ledPin2State = LOW;
-    }
-    digitalWrite(ledPin2, ledPin2State);    // set the LED with the ledState of the variable:
+    previousMillis2 = currentMillis;             // save the last time you blinked the LED
+    ledPin2State = toggleState( ledPin2State );  // toggle the LED
+    digitalWrite(ledPin2, ledPin2State);         // set the LED with the ledState of the variable:
   }
   if( currentMillis - previousMillis3 >= interval3 ) {
     previousMillis3 = currentMillis;       // save the last time you blinked the LED
