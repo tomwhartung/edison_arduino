@@ -44,8 +44,8 @@ unsigned long previousMillis4 = 0;        // will store last time LED 4 was upda
 // constants won't change :
 //
 const long interval2 = 1000;           // interval at which to blink led 2 (milliseconds)
-const long interval3 = 1000;           // interval at which to blink led 3 (milliseconds)
-const long interval4 = 1000;           // interval at which to blink led 4 (milliseconds)
+const long interval3 = 2000;           // interval at which to blink led 3 (milliseconds)
+const long interval4 = 4000;           // interval at which to blink led 4 (milliseconds)
 /**
  * -----------------------------------------------------------------
  * *** CURRENTLY UNUSED *** SAVING FOR POSSIBLE FUTURE REFERENCE ***
