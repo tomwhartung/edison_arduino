@@ -37,9 +37,10 @@ int ledPin4State = HIGH;             // ledState used to set LED 4
 // Generally, you should use "unsigned long" for variables that hold time
 // The value will quickly become too large for an int to store
 //
-unsigned long led2LastMillis = 0;        // will store last time LED 2 was updated
-unsigned long led3LastMillis = 0;        // will store last time LED 3 was updated
-unsigned long led4LastMillis = 0;        // will store last time LED 4 was updated
+unsigned long currentMillis = 0;
+unsigned long led2LastMillis = 0;        // last time LED 2 was updated
+unsigned long led3LastMillis = 0;        // last time LED 3 was updated
+unsigned long led4LastMillis = 0;        // last time LED 4 was updated
 
 int maxCycleSecs = 3;
 unsigned long led2CycleMillis = 1000;           // interval at which to blink led 2 (milliseconds)
@@ -61,27 +62,31 @@ void setup() {
   pinMode(ledPin3, OUTPUT);
   pinMode(ledPin4, OUTPUT);
   Serial.begin(9600);
-  // Serial.println( currentMillis );
+  currentMillis = millis();
+  led2LastMillis = millis();
+  led3LastMillis = millis();
+  led4LastMillis = millis();
+  Serial.println( currentMillis );
 }
 
 /**
  * Loop: here is where you'd put code that needs to be running all the time.
  */
 void loop() {
-  unsigned long currentMillis = millis();
+  currentMillis = millis();
   // Serial.println( currentMillis );
 
   if( currentMillis - led2LastMillis >= led2CycleMillis ) {
-    led3LastMillis = currentMillis;       // save the last time you blinked the LED
+    led2LastMillis = currentMillis;       // save the last time you blinked the LED
     //
     // toggle the LED
     //
     if (ledPin3State == LOW) {
-      ledPin3State = HIGH;
+      ledPin2State = HIGH;
     } else {
-      ledPin3State = LOW;
+      ledPin2State = LOW;
     }
-    digitalWrite(ledPin3, ledPin3State);    // set the LED with the ledState of the variable:
+    digitalWrite(ledPin2, ledPin2State);    // set the LED with the ledState of the variable:
   }
   if( currentMillis - led3LastMillis >= led3CycleMillis ) {
     led3LastMillis = currentMillis;       // save the last time you blinked the LED
