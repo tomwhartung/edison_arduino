@@ -97,7 +97,19 @@ void loop() {
   // (2) Right now only have two working LEDs
   //     TODO: get a third LED for pin 2 and play with three at once
   //
-  if( currentMillis - previousMillis4 >= interval3 ) {
+  if( currentMillis - previousMillis2 >= interval2 ) {
+    previousMillis2 = currentMillis;       // save the last time you blinked the LED
+    //
+    // toggle the LED
+    //
+    if (ledPin2State == LOW) {
+      ledPin2State = HIGH;
+    } else {
+      ledPin2State = LOW;
+    }
+    digitalWrite(ledPin2, ledPin2State);    // set the LED with the ledState of the variable:
+  }
+  if( currentMillis - previousMillis3 >= interval3 ) {
     previousMillis3 = currentMillis;       // save the last time you blinked the LED
     //
     // toggle the LED
