@@ -38,9 +38,9 @@ unsigned long led3LastMillis = 0;        // last time LED 3 was updated
 unsigned long led4LastMillis = 0;        // last time LED 4 was updated
 
 int maxCycleSecs = 3;
-unsigned long led2CycleMillis = 1000;           // interval at which to blink led 2 (milliseconds)
-unsigned long led3CycleMillis = 1000;           // interval at which to blink led 3 (milliseconds)
-unsigned long led4CycleMillis = 1000;           // interval at which to blink led 4 (milliseconds)
+unsigned long led2CycleMillis = 0;           // interval at which to blink led 2 (milliseconds)
+unsigned long led3CycleMillis = 0;           // interval at which to blink led 3 (milliseconds)
+unsigned long led4CycleMillis = 0;           // interval at which to blink led 4 (milliseconds)
 /**
  * return a random number of milliseconds for cycling an led
  */
@@ -73,7 +73,13 @@ void setup() {
   led2LastMillis = millis();
   led3LastMillis = millis();
   led4LastMillis = millis();
+  led2CycleMillis = getRandomCycleMillis();
+  led3CycleMillis = getRandomCycleMillis();
+  led4CycleMillis = getRandomCycleMillis();
   Serial.println( currentMillis );
+  Serial.println( led2CycleMillis );
+  Serial.println( led3CycleMillis );
+  Serial.println( led4CycleMillis );
 }
 
 /**
