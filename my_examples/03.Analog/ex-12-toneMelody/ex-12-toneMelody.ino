@@ -1,19 +1,13 @@
 /*
-  Melody
-
- Plays a melody
-
- circuit:
- * 8-ohm speaker on digital pin 8
-
- created 21 Jan 2010
- modified 30 Aug 2011
- by Tom Igoe
-
-This example code is in the public domain.
-
- http://www.arduino.cc/en/Tutorial/Tone
-
+ * Melody - Plays a melody
+ * Circuit:
+ *   Original: 8-ohm speaker on digital pin 8
+ *   Works with: Grove Starter Kit buzzer on pin 5
+ * created 21 Jan 2010
+ * modified 30 Aug 2011 by Tom Igoe
+ * modified 16 May 2016 by Tom Hartung
+ * This example code is in the public domain.
+ * http://www.arduino.cc/en/Tutorial/Tone
  */
 #include "pitches.h"
 
