@@ -17,8 +17,6 @@
  */
 
 const int ledPin3 = 3;   // the LED on pin 3 (should also work on pins 5 or 8-11)
-const int delayMs = 3;    // ms to delay before incrementing or decrementing brightness
-int brightness = 0;      // brightness level (ranges from 0 to 255 inclusive)
 
 /**
  * declare the ledPins as OUTPUT
@@ -30,16 +28,37 @@ void setup() {
 
 /**
  * increase then decrease the brightness of the LED in a predictable and hard-coded manner
+ * ensures that:
+ * o the min and max brightness levels range from 0 to 255 inclusive and
+ * o the minBrightness < maxBrightness
+ */
+void cycleLedBrightness( int minBrightness, int maxBrightness, int delayMs ) {
+  int brightness = 0;
+  if ( minBrightness < 0 ) {
+    minBrightness = 0;
+  }
+  if ( maxBrightness > 255 ) {
+    maxBrightness = 255;
+  }
+  if ( maxBrightness < minBrightness ) {
+    int tmpMinBrightness = minBrightness;
+    minBrightness = maxBrightness;
+    maxBrightness = tmpMinBrightness;
+  }
+  for ( brightness = minBrightness; brightness < maxBrightness; brightness++ ) {
+    analogWrite( ledPin3, brightness );
+    delay( delayMs );
+    Serial.println( brightness );
+  }
+  for ( brightness = maxBrightness; brightness > minBrightness; brightness-- ) {
+    analogWrite( ledPin3, brightness );
+    delay( delayMs );
+    Serial.println( brightness );
+  }
+}
+/**
+ * call a function to increase then decrease the brightness of the LED in a more flexible manner
  */
 void loop() {
-  for ( brightness = 0; brightness < 255; brightness++ ) {
-    analogWrite( ledPin3, brightness );
-    delay( delayMs );
-    Serial.println( brightness );
-  }
-  for ( brightness = 255; brightness > 0; brightness-- ) {
-    analogWrite( ledPin3, brightness );
-    delay( delayMs );
-    Serial.println( brightness );
-  }
+  cycleLedBrightness( 0, 255, 3 );
 }
