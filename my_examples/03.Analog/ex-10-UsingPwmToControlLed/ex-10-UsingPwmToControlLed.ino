@@ -17,7 +17,7 @@
  */
 
 const int ledPin3 = 3;   // the LED on pin 3 (should also work on pins 5 or 8-11)
-const int delayMs = 10;    // ms to delay before incrementing or decrementing brightness
+const int delayMs = 3;    // ms to delay before incrementing or decrementing brightness
 int brightness = 0;      // brightness level (ranges from 0 to 255 inclusive)
 
 /**
@@ -29,8 +29,7 @@ void setup() {
 }
 
 /**
- * turn the ledPins on and stop the program for <sensorValue> milliseconds:
- * turn the ledPin off and stop the program for for <sensorValue> milliseconds:
+ * increase then decrease the brightness of the LED in a predictable and hard-coded manner
  */
 void loop() {
   for ( brightness = 0; brightness < 255; brightness++ ) {
