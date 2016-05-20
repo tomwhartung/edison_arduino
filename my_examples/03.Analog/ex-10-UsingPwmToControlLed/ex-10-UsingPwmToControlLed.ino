@@ -60,5 +60,8 @@ void cycleLedBrightness( int minBrightness, int maxBrightness, int delayMs ) {
  * call a function to increase then decrease the brightness of the LED in a more flexible manner
  */
 void loop() {
-  cycleLedBrightness( 0, 255, 3 );
+  int delayMs;
+  for ( delayMs = 1; delayMs < 50; delayMs++ ) {
+    cycleLedBrightness( 0, 255, delayMs );
+  }
 }
