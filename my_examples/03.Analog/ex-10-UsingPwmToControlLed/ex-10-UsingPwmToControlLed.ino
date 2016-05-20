@@ -61,7 +61,10 @@ void cycleLedBrightness( int minBrightness, int maxBrightness, int delayMs ) {
  */
 void loop() {
   int delayMs;
-  for ( delayMs = 1; delayMs < 50; delayMs++ ) {
+  for ( delayMs = 1; delayMs < 10; delayMs += 3 ) {
+    cycleLedBrightness( 0, 255, delayMs );
+  }
+  for ( delayMs = 10; delayMs > 1; delayMs -= 3 ) {
     cycleLedBrightness( 0, 255, delayMs );
   }
 }
