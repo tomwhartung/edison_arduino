@@ -48,28 +48,35 @@ void cycleLedBrightness( int minBrightness, int maxBrightness, int delayMs ) {
   for ( brightness = minBrightness; brightness < maxBrightness; brightness++ ) {
     analogWrite( ledPin3, brightness );
     delay( delayMs );
-    Serial.println( brightness );
+    // Serial.println( brightness );
   }
   for ( brightness = maxBrightness; brightness > minBrightness; brightness-- ) {
     analogWrite( ledPin3, brightness );
     delay( delayMs );
-    Serial.println( brightness );
+    // Serial.println( brightness );
   }
 }
 /**
  * call a function to increase then decrease the brightness of the LED in a more flexible manner
  */
 void loop() {
-  int delayMs;
-  int minBrightness;
-  int maxBrightness;
-  for ( minBrightness = 0; minBrightness < 255; minBrightness+= 25 ) {
-    for ( delayMs = 1; delayMs < 3; delayMs++ ) {
-      cycleLedBrightness( minBrightness, maxBrightness, delayMs );
-    }
-    for ( delayMs = 3; delayMs > 1; delayMs-- ) {
-      cycleLedBrightness( minBrightness, maxBrightness, delayMs );
-    }
+  int delayMs = 1;
+  int minBrightness = 0;
+  int maxBrightness = 255;
+  Serial.println( "First loop: increasing minBrightness" );
+  for ( minBrightness = 0; minBrightness < 255; minBrightness += 25 ) {
+    cycleLedBrightness( minBrightness, 255, 1 );
   }
-//  for ( minBrightness = 0, maxBrightness = 255; ) {
+  Serial.println( "Second loop: decreasing maxBrightness" );
+  for ( maxBrightness = 255; maxBrightness > 0; maxBrightness -= 25 ) {
+    cycleLedBrightness( 0, maxBrightness, 1 );
+  }
+  Serial.println( "Third loop: increasing delayMs" );
+  for ( delayMs = 1; delayMs < 6; delayMs++ ) {
+    cycleLedBrightness( 0, 255, delayMs );
+  }
+  Serial.println( "Fourth loop: decreasing delayMs" );
+  for ( delayMs = 6; delayMs > 1; delayMs-- ) {
+    cycleLedBrightness( 0, 255, delayMs );
+  }
 }
