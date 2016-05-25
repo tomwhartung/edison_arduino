@@ -1,9 +1,9 @@
 /*
  * Touch sensor turns on and off a light emitting diode(LED) connected to digital
- * pin 2, when pressing a pushbutton attached to pin 7.
+ * pin 2, when pressing a touch sensor attached to pin 7.
  *
  * The circuit:
- * - pushbutton attached on pin 7
+ * - touch sensor attached on pin 7
  * - LED attached on pin 2
  *
  * created 2005 by DojoDave <http://www.0j0.org>
@@ -16,14 +16,14 @@
 //
 // constants won't change. They're used here to set pin numbers:
 //
-const int buttonPin = 7;     // Touch Sensor pin number
+const int sensorPin = 7;     // Touch Sensor pin number
 const int ledPin2   = 2;     // LED pin number
 //
 // Variables will change:
 //
-int currentButtonReading = LOW;  // most recent reading of the pushbutton value
-int lastButtonReading = LOW;       // the previous reading from the input pin
-int savedButtonState = LOW;    // the current pushbutton status
+int currentSensorReading = LOW;  // most recent reading of the touch sensor value
+int lastSensorReading = LOW;       // the previous reading from the input pin
+int savedSensorState = LOW;    // the current touch sensor status
 int ledPin2State = HIGH;         // variable for saving the led status
 //
 // These variables are longs because the time, measured in miliseconds,
@@ -35,7 +35,7 @@ long debounceDelay = 50;    // the debounce time; increase if the output flicker
  * Set up our input and output pins
  */
 void setup() {
-  pinMode(buttonPin, INPUT);            // initialize the pushbutton pin as an input
+  pinMode(sensorPin, INPUT);            // initialize the touch sensor pin as an input
   pinMode(ledPin2, OUTPUT);             // initialize the LED pin as an output
   digitalWrite(ledPin2, ledPin2State);  // set initial LED state
 }
@@ -43,20 +43,20 @@ void setup() {
  * Loop forever, with added debounce logic
  */
 void loop() {
-  currentButtonReading = digitalRead(buttonPin);    // read the state of the pushbutton value
+  currentSensorReading = digitalRead(sensorPin);    // read the state of the touch sensor value
   //
-  // if the button state has changed. reset the debounce time
+  // if the sensor state has changed. reset the debounce time
   //
-  if ( currentButtonReading != lastButtonReading ) {
+  if ( currentSensorReading != lastSensorReading ) {
     lastDebounceTime = millis();   // reset the debouncing timer
   }
   if ( (millis() - lastDebounceTime) > debounceDelay ) {
-    if ( currentButtonReading != savedButtonState ) {
-      savedButtonState = currentButtonReading;
+    if ( currentSensorReading != savedSensorState ) {
+      savedSensorState = currentSensorReading;
       //
-      // toggle only if the pushbutton is pressed (savedButtonState is HIGH)
+      // toggle only if the touch sensor is pressed (savedSensorState is HIGH)
       //
-      if ( savedButtonState == HIGH ) {
+      if ( savedSensorState == HIGH ) {
         if ( ledPin2State == LOW ) {
           ledPin2State = HIGH;          // turn LED on
         } else {
@@ -66,5 +66,5 @@ void loop() {
     }
   }
   digitalWrite( ledPin2, ledPin2State );    // set LED to desired state
-  lastButtonReading = currentButtonReading;  // save the reading.  Next time through the loop,it'll be the lastButtonReading:
+  lastSensorReading = currentSensorReading;  // save the reading.  Next time through the loop,it'll be the lastSensorReading:
 }
