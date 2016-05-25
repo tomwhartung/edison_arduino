@@ -22,8 +22,8 @@ const int ledPin2   = 2;     // LED pin number
 // Variables will change:
 //
 int currentSensorReading = LOW;  // most recent reading of the touch sensor value
-int lastSensorReading = LOW;       // the previous reading from the input pin
-int savedSensorState = LOW;    // the current touch sensor status
+int lastSensorReading = LOW;     // the previous reading from the input pin
+int savedSensorState = LOW;      // the current touch sensor status
 int ledPin2State = HIGH;         // variable for saving the led status
 //
 // These variables are longs because the time, measured in miliseconds,
