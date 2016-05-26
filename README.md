@@ -11,9 +11,18 @@ intel_roadshow - what got me started on all this
 
 my_examples - modifications to the supplied examples
 
+### my_examples
+
+Contains JS scripts that demonstrate:
+
+* Digital read and write
+* Analog input
+* Pulse Width Modulation (PWM)
+* I2C (tbd)
+
 ## Downloads
 
-List of files downloaded for the Intel Edison, with brief
+Following is a list of files downloaded for the Intel Edison, with brief
 descriptions of what they contain, whether they're installed,
 whether I want to use them on an on-going basis, etc.
 
