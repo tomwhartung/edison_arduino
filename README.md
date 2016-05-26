@@ -1,7 +1,11 @@
 
 # edison_arduino
 
-Use this repo for work done on the edison (arduino).
+This repo contains Arduino (C/C++) code that runs on the edison (arduino).
+
+Run these programs by using the Arduino IDE on a host computer to compile, push it to the chip, and run it.
+
+#### NOTE: This is all still a work in progress!
 
 ## Subdirectories
 
@@ -19,6 +23,22 @@ Contains JS scripts that demonstrate:
 * Analog input
 * Pulse Width Modulation (PWM)
 * I2C (tbd)
+
+#### Configuration
+
+I developed these programs using the Edison Arduino breakout board and a Grove Starter Kit.
+
+Following is a list of what actuators and sensors should be connected to which pins.
+
+* Digital Pin 2 (D2) - LED (red)
+* Digital Pin 3 (D3) - LED (green)
+* Digital Pin 4 (D4) - LED (blue)
+* Digital Pin 5 (D5) - Buzzer
+* Digital Pin 5 (D7) - Touch sensor
+* Digital Pin 5 (D8) - Button
+* Analog Pin 0 (A0) - Rotary Angle Sensor (Potentiometer or "Pot")
+
+Note that not all of the examples use all of these connections.
 
 ## Downloads
 
