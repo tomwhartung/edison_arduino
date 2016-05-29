@@ -44,21 +44,21 @@ Note that not all of the examples use all of these connections.
 
 | Section | Example Name | Arduino (C/C++) | Node (JS) | Python |
 | ------- | ------------ | --------------- | --------- | ------ |
-| 01.Basics | 00-turnItOff | Y | Y | Y |
-|           | 01-blink | Y | Y | Y |
-|           | 02-analog-read | Y | Y | Y |
-|           | 03-digital-read | Y | Y | Y |
-| 02.Digital | 04-digital-write | Y | Y | Y |
-|            | 05-turnThemOff | Y | Y | Y |
-|            | 06-randomRgb | Y | Y | Y |
-|            | 07-buttonTogglesLed | Y | Y | Y |
-|            | 08-buttonTurnsOnLed | Y | Y | Y |
-|            | 09-debouncedButtonTogglesLed | Y |   | Y |
-| 03.Analog | 10-UsingPwmToControlLed | Y | Y | Y |
-| 03.Analog | 11-AnalogInputControlsLedPwm | Y | Y | Y |
-| 03.Analog | 12-AnalogInputControlsLeds | Y | Y | Y |
-| 06.Sensors | 17-touchSensorTogglesLed | Y | Y | Y |
-| 06.Sensors | 18-touchSensorTurnsOnLed | Y | Y | Y |
+| 01.Basics | 00-turnItOff | :Y: | :Y: | :Y: |
+|           | 01-blink | :Y: | :Y: | :Y: |
+|           | 02-analog-read | :Y: | :Y: | :Y: |
+|           | 03-digital-read | :Y: | :Y: | :Y: |
+| 02.Digital | 04-digital-write | :Y: | :Y: | :Y: |
+|            | 05-turnThemOff | :Y: | :Y: | :Y: |
+|            | 06-randomRgb | :Y: | :Y: | :Y: |
+|            | 07-buttonTogglesLed | :Y: | :Y: | :Y: |
+|            | 08-buttonTurnsOnLed | :Y: | :Y: | :Y: |
+|            | 09-debouncedButtonTogglesLed | :Y: |   | :Y: |
+| 03.Analog | 10-UsingPwmToControlLed | :Y: | :Y: | :Y: |
+|           | 11-AnalogInputControlsLedPwm | :Y: | :Y: | :Y: |
+|           | 12-AnalogInputControlsLeds | :Y: | :Y: | :Y: |
+| 06.Sensors | 17-touchSensorTogglesLed | :Y: | :Y: | :Y: |
+|            | 18-touchSensorTurnsOnLed | :Y: | :Y: | :Y: |
 
 
 ## Downloads
