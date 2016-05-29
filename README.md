@@ -58,6 +58,7 @@ Note that not all of the examples use all of these connections.
 |           | 11-AnalogInputControlsLedPwm  | Y | Y | Y |
 |           | 12-AnalogInputControlsLeds    | Y | Y | Y |
 |           | 13-toneMelody                 | Y |   |   |
+| 04.Communication | ex-15-ASCIITable       | Y |   |   |
 | 06.Sensors | 17-touchSensorTogglesLed     | Y | Y | Y |
 |            | 18-touchSensorTurnsOnLed     | Y | Y | Y |
 
