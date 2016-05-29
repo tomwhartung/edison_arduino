@@ -45,9 +45,9 @@ Note that not all of the examples use all of these connections.
 | Section | Example Name | Arduino (C/C++) | Node (JS) | Python |
 | ------- | ------------ | --------------- | --------- | ------ |
 | 01.Basics | 00-turnItOff | Y | Y | Y |
-| 01.Basics | 02-analog-read | Y | Y | Y |
-| 01.Basics | 02-analog-read | Y | Y | Y |
-| 01.Basics | 03-digital-read | Y | Y | Y |
+| --------- | 01-blink | Y | Y | Y |
+| | 02-analog-read | Y | Y | Y |
+| | 03-digital-read | Y | Y | Y |
 | 02.Digital | 04-digital-write | Y | Y | Y |
 | 02.Digital | 05-turnThemOff | Y | Y | Y |
 | 02.Digital | 06-randomRgb | Y | Y | Y |
