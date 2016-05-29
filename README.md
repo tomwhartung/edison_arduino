@@ -61,6 +61,7 @@ Note that not all of the examples use all of these connections.
 | 04.Communication | ex-15-ASCIITable       | Y |   |   |
 | 06.Sensors | 17-touchSensorTogglesLed     | Y | Y | Y |
 |            | 18-touchSensorTurnsOnLed     | Y | Y | Y |
+|            | 19-debouncedTouchSensorTogglesLed | Y |   | Y |
 
 
 ## Downloads
